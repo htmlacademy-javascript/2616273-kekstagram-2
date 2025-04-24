@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Наталия Бахтинова](https://up.htmlacademy.ru/javascript-individual/2/user/2616273).
-* Наставник: [Евгений Лепёшкин] (https://htmlacademy.ru/profile/spearance).
+* Наставник: [Евгений Лепёшкин](https://htmlacademy.ru/profile/spearance).
 
 ---
 
