@@ -1,20 +1,28 @@
-const  checkLength (string str = '', int maxLength =0) =>
- str.length <= maxLength;
-console.log(checkLength)('проверяемая строка', 20); // true
-console.log(checkLength)('проверяемая строка', 18); // true
-console.log(checkLength)('проверяемая строка', 10); // false
+const checkLength = (string = '', maxLength = 1) => string.length <= maxLength;
 
-const isPalindrome (string str) =>
- left=0, int right=-1;
-while (left<right);
-if (str.charAt(left) != str.charAt(right)) return false;
-left++;
-right--;
+const isPalindrome = (string = '') => {
+  string = string.replaceAll(' ', '').toLowerCase();
+  let reversLine = '';
+  for (let i = string.length - 1; i >= 0; i--) {
+    reversLine += string[i];
+  }
+  return string === reversLine;
+};
 
-console.log(isPalindrome)('топот'); // true
-console.log(isPalindrome)('ДовОд'); // true
-console.log(isPalindrome)('Кекс');  // false
+const extractNumbers = (string) => {
+  let result = '';
+  string = string.toString();
+  for (let i = 0; i <= string.length - 1; i++) {
+    if (Number.isNaN(parseInt(string[i], 10)) === false) {
+      result += string[i];
+    }
+  }
+  return result === '' ? NaN : Number(result);
+};
 
-srf = replaceAll(" ", "");
-
-console.log(isPalindrome)('Лёша на полке клопа нашёл '); // true
+const getRandomInteger = (a, b) => {
+  const lower = Math.ceil(Math.min(a, b));
+  const upper = Math.floor(Math.max(a, b));
+  const result = Math.random() * (upper - lower + 1) + lower;
+  return Math.floor(result);
+};
